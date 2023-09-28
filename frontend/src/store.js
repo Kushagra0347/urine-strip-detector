@@ -2,16 +2,14 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
-import { postUrineReducer } from './redux/reducers/urineReducers'
+import { getUrineStripReducer } from './redux/reducers/urineStripReducers'
 
 const reducer = combineReducers({
-    addUrine: postUrineReducer
+  getUrineStrip: getUrineStripReducer,
 })
 const middleware = [thunk]
 
-const initialState = {
-  
-}
+const initialState = {}
 
 const store = createStore(
   reducer,
