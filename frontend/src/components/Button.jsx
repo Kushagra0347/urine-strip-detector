@@ -4,7 +4,7 @@ function Button({ text, type = 'button', onClick, className }) {
   return (
     <button
       type={type}
-      className={`${className} flex items-center justify-center px-4 py-2`}
+      className={`${className} `}
       onClick={onClick}
     >
       {text}

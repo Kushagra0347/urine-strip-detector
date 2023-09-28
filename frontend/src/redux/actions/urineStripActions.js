@@ -21,6 +21,7 @@ export const postUrineStripImage = (file) => async (dispatch) => {
     body.append('urine_strip', file)
 
     const { data } = await axios.post(`${url}/add`, body, config)
+    console.log(data)
 
     dispatch({ type: ADD_URINE_STRIP_SUCCESS, payload: data.colors })
   } catch (e) {
