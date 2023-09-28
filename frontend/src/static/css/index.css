@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: gladiora;
+  src: url('src/static/font/Gladiora Sans Serif Font/gladiora-regular.ttf');
+}

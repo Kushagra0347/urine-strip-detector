@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Button from './Button'
 import { useDispatch, useSelector } from 'react-redux'
 import { postUrineStripImage } from '../redux/actions/urineStripActions'
 import Loader from './Loader'
@@ -28,8 +27,8 @@ function ImageUpload() {
   }
 
   return (
-    <div className="px-10 pt-10">
-      <label className="flex h-60 w-full cursor-pointer appearance-none justify-center rounded-md border-2 border-dashed border-gray-300 bg-white px-4 transition hover:border-gray-400 focus:outline-none">
+    <div className="flex w-3/4 items-center justify-evenly py-10 pl-8">
+      <label className="mr-8 flex h-[28rem] w-full cursor-pointer appearance-none justify-center rounded-md border-2 border-dashed border-gray-300 bg-white px-4 transition hover:border-gray-400 focus:outline-none">
         <div className="flex items-center space-x-2">
           <i className="far fa-cloud-upload text-4xl"></i>
           <span

@@ -5,15 +5,18 @@ import {
   ADD_URINE_STRIP_SUCCESS,
 } from '../constants/urineStrip'
 
-const url = 'http://127.0.0.1:8000/api/urine-strip'
+const url = 'http://127.0.0.1:8000/urine-strip'
 
-export const postUrineStripImage = (file) => async (dispatch) => {
+export const postUrineStripImage = (file) => async (dispatch, getState) => {
   try {
     dispatch({ type: ADD_URINE_STRIP_REQUEST })
+
+    const { userInfo } = getState().loginInfo
 
     const config = {
       headers: {
         'Content-Type': 'multipart/form-data',
+        Authorization: `Bearer ${userInfo.token}`,
       },
     }
 

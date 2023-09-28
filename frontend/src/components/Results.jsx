@@ -16,8 +16,10 @@ function Results() {
       style={defaultStyles}
     />
   ) : (
-    <div className="pt-20 text-center text-2xl">
-      Select an image that is a urine sample
+    <div className="flex h-full items-center justify-center px-2">
+      <p className="text-center text-2xl">
+        Select an image that is a urine sample
+      </p>
     </div>
   )
 }
